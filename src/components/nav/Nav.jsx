@@ -1,10 +1,8 @@
 import React, { useState} from 'react'
-import {Switch, Link, Route} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import './nav.css'
 import Hamburgr from '../../icons/hamburger.png'
 import HamburgrOpen from '../../icons/hamburgerOpen.png'
-import About from '../../pages/about/About'
-import App from '../../App'
 
 export default function Nav(){  
 
@@ -14,9 +12,9 @@ export default function Nav(){
             menu = <div className="menu">
                 <button onClick={()=> setShowMenu(false)}><img src={HamburgrOpen} alt="" /></button>
                 <ul className="menuLinkList">
-                    <li className="line menuLinkListIteam"><a href="/">About</a></li>
-                    <li className="line menuLinkListIteam"><a href="/">TopUp</a></li>
-                    <li className="line menuLinkListIteam"><a href="/">Contact</a></li>
+                    <li className="line menuLinkListIteam"><Link className="navLinkA" to="/about">About</Link></li>
+                    <li className="line menuLinkListIteam"><Link className="navLinkA" to="/topup">TopUp</Link></li>
+                    <li className="line menuLinkListIteam"><Link className="navLinkA" to="/contact">Contact</Link></li>
                 </ul>
             </div>
         }
@@ -26,11 +24,9 @@ export default function Nav(){
                     <div className="navLogo"><p className='navLogoText'><Link className="navLinkA" exact="true" to="/">ffabc.xyz</Link></p></div>
                     <div id="hidden" className="navLinks">
                         <ul className="navLinkList">
-                            <Switch>
                                 <li className="navLinkListIteam">
                                     <Link className="navLinkA" to="/about">About</Link>
                                 </li>
-                            </Switch>
                                 <li className="navLinkListIteam">
                                     <Link className="navLinkA" to="/topup">TopUp</Link>
                                 </li>

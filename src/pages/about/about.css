@@ -1,0 +1,22 @@
+.hero{
+    padding:0 75px 0 75px;
+    text-align: center;
+}
+
+.hero img{
+    width: 80%;
+    border-radius: 0 0 10px 10px;
+}
+
+.heroDes img{
+    width: 10%;
+    border-radius: 50%;
+}
+
+.heroDes{
+    padding: 0 275px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}

@@ -111,6 +111,14 @@
 .menu ul li{
     padding: 15px;
 }
+.navLinkA{
+    text-decoration: none;
+    color: black;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 26px;
+}
 .menu ul li .navLinkA{
     text-decoration: none;
     color: black;
