@@ -1,0 +1,17 @@
+
+.LogoText{
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: 1px;
+    color: rgb(36, 36, 36);
+}
+.LogoTextTernary{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 75px;
+}

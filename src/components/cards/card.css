@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap');
+
+.cardContainer{
+    font-family: 'Mina', sans-serif;
+    margin:0 25px;
+}
+
+@media screen and (max-width:850px) {
+    #homeCard{
+        grid-template: 
+        "f f"
+        "f f"
+        "f f"
+        ;
+    }
+    #cardContainer{
+        padding: 0;
+    }
+}
+.homeCard{
+    text-align: center;
+    display: grid;
+    grid-template:  "f f f"
+                    "f f f";
+}
+.cardContainer{
+    background-color: rgb(245, 245, 245);
+    margin-bottom: 45px;
+    padding: 25px 0;
+    box-shadow: 5px 5px 15px 5px #00000033;
+    transition: all .3s ease-in-out;
+}
+.cardContainer:hover{
+    box-shadow: 5px 5px 15px 5px #ff00007e;
+}
+.cardImg img{
+    height: 200px;
+    width: 150;
+}
+.cardTitle{
+    font-size: 26px;
+    font-weight: 700;
+}
+.cardPriceRange{
+    font-size: 18px;
+    font-weight: 500;
+}
+.cardlink{
+    text-decoration: none;
+}

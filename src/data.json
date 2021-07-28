@@ -1,0 +1,41 @@
+{
+    "packages":[
+        {
+            "id":"1",
+            "img-url":"https://picsum.photos/200",
+            "name":"ডায়মন্ড টপ আপ",
+            "range":"৳৪৫-৳২২৪০"
+        },
+        {
+            "id":"2",
+            "img-url":"https://picsum.photos/200",
+            "name":"লেভেল আপ পাস",
+            "range":"৳৪৫-৳২২৪০"
+        },
+        {
+            "id":"3",
+            "img-url":"https://picsum.photos/200",
+            "name":"এয়ার্ড্রপ",
+            "range":"৳৪৫-৳২২৪০"
+        },
+        {
+            "id":"4",
+            "img-url":"https://picsum.photos/200",
+            "name":"উইক্লি",
+            "range":"৳৪৫-৳২২৪০"
+        },
+        {
+            "id":"5",
+            "img-url":"https://picsum.photos/200",
+            "name":"মান্থলি",
+            "range":"৳৪৫-৳২২৪০"
+        },
+        {
+            "id":"5",
+            "img-url":"https://picsum.photos/200",
+            "name":"প্রমো অফার",
+            "range":"৳৪৫-৳২২৪০"
+        }
+    ]
+
+}
