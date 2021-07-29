@@ -1,5 +1,4 @@
 import React, { Component,useState } from 'react'
-import './topup.css'
 import bkash from '../../icons/bkash.png'
 import nagad from '../../icons/nagad.png'
 import rocket from '../../icons/rocket.png'
@@ -37,13 +36,14 @@ function PaymentDiv(props){
         }
         else{
             return(
-                <div className="paymentContainer">
+                <div className="paymentSelectContainer">
+                    <p className="paymentSelect">যেভাবে টাকা পাঠাবেন, তা নির্বাচন করুন। বিকাশ, নগদ অথবা রকেট আইকন এ ক্লিক করুন।</p>
                 </div>
             )
         }  
 }
 
-export default class Topup extends Component {
+export default class Levelup extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -62,7 +62,7 @@ export default class Topup extends Component {
         return (
             <section className="topup-section">
                 <div className="topupformTitle">
-                    <h1>ডাইমন্ড টপ আপ</h1>
+                    <h1>লেভেল আপ পাস</h1>
                 </div>
                 <div className="mainForm">
                     <form action="">
@@ -77,10 +77,6 @@ export default class Topup extends Component {
                         <div className="name">
                             <p>গেম উআইডি কোডঃ</p>
                             <input type="text" placeholder="123456789" name='uid' />
-                        </div>
-                        <div className="name">
-                            <p>কত ডাইমন্ড নিতে চান?</p>
-                            <input type="text" placeholder="100" name='quantity' />
                         </div>
                         <did className="paymentMethod">
                             <div className="paymentImg">
@@ -97,6 +93,9 @@ export default class Topup extends Component {
                         <div className="name">
                             <p>যে নাম্বার থেকে টাকা পাঠাবেনঃ</p>
                             <input type="text" placeholder="123xx-xxxxxx" name='number' />
+                        </div>
+                        <div className="totalCount">
+                            <p className="paymentTitle">আপনাকে ২০০ টাকা পাঠাতে হবে।</p>
                         </div>
                         <button className="topupFormSubmitBtn" type="submit">কিনুন</button>
                     </form>

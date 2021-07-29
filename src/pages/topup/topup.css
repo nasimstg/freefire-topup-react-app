@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap');
+.topup-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Mina', sans-serif;
+}
+.topupformTitle{
+    font-size: 28px;
+    text-align: center;
+    color: rgb(26, 26, 26);
+}
+.mainForm{
+    margin: 10px 25px;
+}
+.name p{
+    font-size: 18px;
+    margin: 25px 0 10px 0;
+    text-transform: uppercase;
+}
+
+.name input{
+    height: 25px;
+    width: 295px;
+    padding: 5px 15px;
+    border: none;
+    background-color: rgba(140, 200, 255, 0.281);
+    border-radius: 0 0 0 5px;
+    border-left: 1px solid black ;
+    border-bottom: 1px solid black ;
+}
+.name input:focus{
+    outline: none;
+    border-bottom:1px solid green;
+    border-left: 1px solid green;
+}
+.paymentMethod{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.paymentMethod .paymentImg{
+    margin: 5px;
+}
+.paymentImg img{
+    width: 100px;
+    height: auto;
+}
+.topupFormSubmitBtn{
+    margin-top: 25px;
+    padding: 7px 20px;
+    background-color: royalblue;
+    color: white;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    transition: all .3s ease-in-out;
+    border-radius: 3px;
+}
+
+.topupFormSubmitBtn:hover{
+    color: royalblue;
+    background-color: white;
+    border: 1px solid royalblue;
+}
+.paymentTitle{
+    font-size: 28px;
+    font-weight: 500;
+}
+.totalCount p{
+    margin-top: 25px;
+    font-size: 18px;
+}
+.paymentSelectContainer{
+    width: 250px;
+    height: auto;
+}
+.paymentSelect{
+    font-size: 18px;
+}

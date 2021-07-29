@@ -12,9 +12,9 @@ export default function Nav(){
             menu = <div className="menu">
                 <button onClick={()=> setShowMenu(false)}><img src={HamburgrOpen} alt="" /></button>
                 <ul className="menuLinkList">
-                    <li className="line menuLinkListIteam"><Link className="navLinkA" to="/about">About</Link></li>
-                    <li className="line menuLinkListIteam"><Link className="navLinkA" to="/topup">TopUp</Link></li>
-                    <li className="line menuLinkListIteam"><Link className="navLinkA" to="/contact">Contact</Link></li>
+                    <li className="line menuLinkListIteam"><Link className="navLinkA" to="/about" onClick={()=> setShowMenu(false)}>About</Link></li>
+                    <li className="line menuLinkListIteam"><Link className="navLinkA" to="/topup" onClick={()=> setShowMenu(false)}>TopUp</Link></li>
+                    <li className="line menuLinkListIteam"><Link className="navLinkA" to="/contact" onClick={()=> setShowMenu(false)}>Contact</Link></li>
                 </ul>
             </div>
         }
