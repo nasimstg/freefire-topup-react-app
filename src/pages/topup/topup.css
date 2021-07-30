@@ -14,7 +14,7 @@
 .mainForm{
     margin: 10px 25px;
 }
-.name p{
+.name .nameTitle{
     font-size: 18px;
     margin: 25px 0 10px 0;
     text-transform: uppercase;
@@ -78,4 +78,38 @@
 }
 .paymentSelect{
     font-size: 18px;
+}
+.diamondCount{
+    display: grid;
+    grid-template: "f f f f"
+                    "f f f f";
+}
+.diamnodCard{
+    height: 50px;
+    width: 60px;
+    text-align: center;
+    margin: 10px;
+    box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.5);
+    user-select: none;
+}
+.diamnodCard:hover{
+    box-shadow: 3px 3px 5px 5px rgba(60, 221, 108, 0.5);
+
+}   
+.diamnodCard img{
+    width: 15px;
+    height: auto;
+    margin: 0;
+    margin-left: 5px;
+
+}
+.diamnodCard .diamondValue{
+    font-size: 14px;
+    margin: 0;
+}
+.diamondCountTitle{
+    font-size: 12px;
+}
+.mb0{
+    margin-bottom: 0;
 }

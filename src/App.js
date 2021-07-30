@@ -6,7 +6,9 @@ import Nav from './components/nav/Nav'
 import About from './pages/about/About';
 import Levelup from './pages/levelup/Levelup';
 import Topup from './pages/topup/Topup';
-
+import Admin from './pages/admin/Admin';
+import Weekly from './pages/weekly/Weekly';
+import Monthly from './pages/monthly/Monthly';
 function App() {
   return (
       <BrowserRouter>
@@ -19,6 +21,16 @@ function App() {
           </Switch>
           <Switch>
             <Route path="/leveluppass" component={Levelup} />
+          </Switch>
+          
+          <Switch>
+            <Route path="/admin" component={Admin} />
+          </Switch>
+          <Switch>
+            <Route path="/weekly" component={Weekly} />
+          </Switch>
+          <Switch>
+            <Route path="/monthly" component={Monthly} />
           </Switch>
           <Switch>
           <Route exact={true} path="/" >

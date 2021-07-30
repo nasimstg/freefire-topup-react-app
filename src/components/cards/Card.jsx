@@ -6,14 +6,14 @@ const packages =[{
         "id":"1",
         "imgUrl":"https://picsum.photos/200",
         "name":"ডায়মন্ড টপ আপ",
-        "range":"৳৪৫-৳২২৪০",
+        "range":"৳৩০-৳৪৫০০",
         "toLink":"/topup"
     },
     {
         "id":"2",
         "imgUrl":"https://picsum.photos/200",
         "name":"লেভেল আপ পাস",
-        "range":"৳৪৫-৳২২৪০",
+        "range":"৳২০০",
         "toLink":"/levelUpPass"
     },
     {
@@ -27,14 +27,14 @@ const packages =[{
         "id":"4",
         "imgUrl":"https://picsum.photos/200",
         "name":"উইক্লি",
-        "range":"৳৪৫-৳২২৪০",
+        "range":"৳২০০",
         "toLink":"/weekly"
     },
     {
         "id":"5",
         "imgUrl":"https://picsum.photos/200",
         "name":"মান্থলি",
-        "range":"৳৪৫-৳২২৪০",
+        "range":"৳৬৮০",
         "toLink":"/monthly"
     },
     {

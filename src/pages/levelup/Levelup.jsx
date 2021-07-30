@@ -1,4 +1,4 @@
-import React, { Component,useState } from 'react'
+import React, { Component } from 'react'
 import bkash from '../../icons/bkash.png'
 import nagad from '../../icons/nagad.png'
 import rocket from '../../icons/rocket.png'
@@ -19,7 +19,7 @@ function PaymentDiv(props){
         {
             return (
                 <div className="paymentContainer">
-                    <p className="paymentTitle">নাগাদ</p>
+                    <p className="paymentTitle">নগদ</p>
                     <p className="paymentNumber">যে নাম্বারে টাকা পাঠাবেনঃ  01307085310</p>
                     <p className="paymentDescription">Nagad Personal</p>
                 </div>
@@ -36,48 +36,50 @@ function PaymentDiv(props){
         }
         else{
             return(
-                <div className="paymentSelectContainer">
-                    <p className="paymentSelect">যেভাবে টাকা পাঠাবেন, তা নির্বাচন করুন। বিকাশ, নগদ অথবা রকেট আইকন এ ক্লিক করুন।</p>
-                </div>
+                <>
+                </>
             )
         }  
 }
 
-export default class Levelup extends Component {
+export default class levelUpPass extends Component {
     constructor(props) {
         super(props);
         this.state = {
           paymentMethod: '',
-          qunatity : 0
+          qunatity : 0,
+          value : 0,
+          payShow : false
         };
       }
-    if(bkash){
-        return(
-            <>
-
-            </>
-        )
-    }
     render() {
         return (
             <section className="topup-section">
                 <div className="topupformTitle">
-                    <h1>লেভেল আপ পাস</h1>
+                    <h1>উইক্লি পাস ৳২০০</h1>
                 </div>
                 <div className="mainForm">
                     <form action="">
                         <div className="name">
-                            <p>আপনার নামঃ </p>
+                            <p className="nameTitle">আপনার নামঃ </p>
                             <input type="text" placeholder="Your Name" name='name' />
                         </div>
                         <div className="name">
-                            <p>ঠিকানাঃ</p>
+                            <p className="nameTitle">ঠিকানাঃ</p>
                             <input type="text" placeholder="Sirajganj" name='address' />
                         </div>
                         <div className="name">
-                            <p>গেম উআইডি কোডঃ</p>
-                            <input type="text" placeholder="123456789" name='uid' />
+                            <p className="nameTitle">গেম আইডিঃ</p>
+                            <input type="text" placeholder="facebook number/gmail" name='uid' />
                         </div>
+                        <div className="name">
+                            <p className="nameTitle">গেম আইডি পাসওয়ার্ডঃ  </p>
+                            <input type="text" placeholder="facebook/gmail password" name='uid' />
+                        </div>
+                        <div className="name">
+                            <p className="nameTitle">৳২০০ টাকা </p>
+                        </div>
+
                         <did className="paymentMethod">
                             <div className="paymentImg">
                                 <img src={bkash} value="bkash" alt="bkash" onClick={ () => this.setState({paymentMethod:"bkash"}) } />
@@ -91,11 +93,8 @@ export default class Levelup extends Component {
                         </did>
                         <PaymentDiv method={this.state.paymentMethod} />
                         <div className="name">
-                            <p>যে নাম্বার থেকে টাকা পাঠাবেনঃ</p>
+                            <p className="nameTitle">যে নাম্বার থেকে টাকা পাঠাবেনঃ</p>
                             <input type="text" placeholder="123xx-xxxxxx" name='number' />
-                        </div>
-                        <div className="totalCount">
-                            <p className="paymentTitle">আপনাকে ২০০ টাকা পাঠাতে হবে।</p>
                         </div>
                         <button className="topupFormSubmitBtn" type="submit">কিনুন</button>
                     </form>
