@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 
 export default function SigninForm(props) {
+    
     return (
         <div className="signInForm">
                 <form action="">
@@ -8,7 +9,7 @@ export default function SigninForm(props) {
                     <input type="text" placeholder="User Name" />
                     <p className="lebel">Password:</p>
                     <input type="text" placeholder="Password" />
-                    <button type="submit" className="btn"> Sign In</button>
+                    <button type="submit" className="btn" onClick={() => this.state.setLoggedInStatus('false')}> Sign In</button>
                 </form>
             </div>
     )
