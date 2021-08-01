@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Card from './components/cards/Card';
@@ -6,13 +7,16 @@ import Nav from './components/nav/Nav'
 import About from './pages/about/About';
 import Levelup from './pages/levelup/Levelup';
 import Topup from './pages/topup/Topup';
-import Admin from './pages/admin/Admin';
 import Weekly from './pages/weekly/Weekly';
 import Monthly from './pages/monthly/Monthly';
+import Admin from './components/Admin'
 function App() {
   return (
       <BrowserRouter>
           <Nav />
+          <React.StrictMode>
+          <Admin />
+          </React.StrictMode>,
           <Switch>
           <Route path="/topup" component={Topup} />
           </Switch>
@@ -21,10 +25,6 @@ function App() {
           </Switch>
           <Switch>
             <Route path="/leveluppass" component={Levelup} />
-          </Switch>
-          
-          <Switch>
-            <Route path="/admin" component={Admin} />
           </Switch>
           <Switch>
             <Route path="/weekly" component={Weekly} />
