@@ -81,12 +81,13 @@
 }
 .diamondCount{
     display: grid;
-    grid-template: "f f f f"
-                    "f f f f";
+    grid-template: "f f f"
+                    "f f f"
+                    "f f f";
 }
 .diamnodCard{
     height: 50px;
-    width: 60px;
+    width: 90px;
     text-align: center;
     margin: 10px;
     box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.5);

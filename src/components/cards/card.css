@@ -2,22 +2,24 @@
 
 .cardContainer{
     font-family: 'Mina', sans-serif;
-    margin:0 25px;
+    margin:0 15px;
 }
-
 @media screen and (max-width:850px) {
     #homeCard{
         grid-template: 
-        "f"
-        "f"
-        "f"
-        "f"
-        "f"
-        "f"
+        "f f"
+        "f f"
+        "f f"
         ;
     }
     #cardContainer{
         padding: 0;
+        height: 160px;
+        width: 150px;
+    }
+    #cardImg img{
+        width: 150px;
+        height: auto;
     }
 }
 .homeCard{
@@ -28,8 +30,8 @@
 }
 .cardContainer{
     background-color: rgb(245, 245, 245);
-    margin-bottom: 45px;
-    padding: 25px 0;
+    margin-bottom: 25px;
+    padding: 10px 0;
     box-shadow: 5px 5px 15px 5px #00000033;
     transition: all .3s ease-in-out;
 }
@@ -37,15 +39,15 @@
     box-shadow: 5px 5px 15px 5px #ff00007e;
 }
 .cardImg img{
-    height: 200px;
-    width: 150;
+    height: auto;
+    width: 150px;
 }
 .cardTitle{
-    font-size: 26px;
+    font-size: 14px;
     font-weight: 700;
 }
 .cardPriceRange{
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
 }
 .cardlink{

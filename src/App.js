@@ -10,6 +10,8 @@ import Topup from './pages/topup/Topup';
 import Weekly from './pages/weekly/Weekly';
 import Monthly from './pages/monthly/Monthly';
 import Admin from './components/Admin'
+import Promo from './pages/promo/Promo';
+import Airdrop from './pages/airdrop/Airdrop';
 function App() {
   return (
       <BrowserRouter>
@@ -27,7 +29,13 @@ function App() {
             <Route path="/leveluppass" component={Levelup} />
           </Switch>
           <Switch>
+            <Route path="/airdrop" component={Airdrop} />
+          </Switch>
+          <Switch>
             <Route path="/weekly" component={Weekly} />
+          </Switch>
+          <Switch>
+            <Route path="/promoOffer" component={Promo} />
           </Switch>
           <Switch>
             <Route path="/monthly" component={Monthly} />
