@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2ec35883.chunk.css",
+    "main.js": "/static/js/main.cd6573fc.chunk.js",
+    "main.js.map": "/static/js/main.cd6573fc.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.9e28b216.js",
+    "runtime-main.js.map": "/static/js/runtime-main.9e28b216.js.map",
+    "static/js/2.bf9fd684.chunk.js": "/static/js/2.bf9fd684.chunk.js",
+    "static/js/2.bf9fd684.chunk.js.map": "/static/js/2.bf9fd684.chunk.js.map",
+    "static/js/3.7a847b6d.chunk.js": "/static/js/3.7a847b6d.chunk.js",
+    "static/js/3.7a847b6d.chunk.js.map": "/static/js/3.7a847b6d.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.2ec35883.chunk.css.map": "/static/css/main.2ec35883.chunk.css.map",
+    "static/js/2.bf9fd684.chunk.js.LICENSE.txt": "/static/js/2.bf9fd684.chunk.js.LICENSE.txt",
+    "static/media/bkash.1b2475a3.png": "/static/media/bkash.1b2475a3.png",
+    "static/media/diamond.f64e9df7.png": "/static/media/diamond.f64e9df7.png",
+    "static/media/nagad.c9a69229.png": "/static/media/nagad.c9a69229.png",
+    "static/media/rocket.417f5e9a.png": "/static/media/rocket.417f5e9a.png",
+    "static/media/updated.a5c27559.png": "/static/media/updated.a5c27559.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9e28b216.js",
+    "static/js/2.bf9fd684.chunk.js",
+    "static/css/main.2ec35883.chunk.css",
+    "static/js/main.cd6573fc.chunk.js"
+  ]
+}

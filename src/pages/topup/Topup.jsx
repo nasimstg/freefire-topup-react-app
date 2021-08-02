@@ -4,6 +4,9 @@ import bkash from '../../icons/bkash.png'
 import nagad from '../../icons/nagad.png'
 import rocket from '../../icons/rocket.png'
 import diamond from '../../icons/diamond.png'
+import firebase from '../../firebase'
+import uuid from 'react-uuid'
+import 'firebase/database'
 
 function PaymentDiv(props){
     let paymentMethodF = props.method;
@@ -45,15 +48,41 @@ function PaymentDiv(props){
 }
 
 export default class Topup extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
-          paymentMethod: '',
-          qunatity : 0,
-          value : 0,
-          payShow : false
+            database : null,
+            address:"",
+            name:"",
+            uid : '',
+            number:'',
+            paymentMethod: '',
+            qunatity : 0,
+            value : 0,
+            payShow : false,
         };
+      } 
+      
+      
+      componentDidMount = async () =>{
+        this.setState({
+            database : firebase.database()  
+          })
       }
+    pushOrder = async() =>{
+        const topUpId = `id${Date.now()}`;
+        const {name,address, uid, number, paymentMethod, qunatity, value} = this.state
+        const orderRef = await firebase.database().ref(`topup/${topUpId}`).push()
+        var key = orderRef.key()
+
+        var order = {
+            id: key, name,address, uid, number, paymentMethod, qunatity, value,topUpId
+        }
+        orderRef.push(order)
+
+    }
+
     render() {
         return (
             <section className="topup-section">
@@ -61,18 +90,18 @@ export default class Topup extends Component {
                     <h1>ডাইমন্ড টপ আপ</h1>
                 </div>
                 <div className="mainForm">
-                    <form action="">
+                    <form action=""  onSubmit= { this.pushOrder} >
                         <div className="name">
                             <p className="nameTitle">আপনার নামঃ </p>
-                            <input type="text" placeholder="Your Name" name='name' />
+                            <input type="text" placeholder="Your Name" name='name' onChange={(e) =>{this.setState({name:e.target.value})}} />
                         </div>
                         <div className="name">
                             <p className="nameTitle">ঠিকানাঃ</p>
-                            <input type="text" placeholder="Sirajganj" name='address' />
+                            <input type="text" placeholder="Sirajganj" name='address' onChange={(e) =>{this.setState({address:e.target.value})}} />
                         </div>
                         <div className="name">
                             <p className="nameTitle">গেম উআইডি কোডঃ</p>
-                            <input type="text" placeholder="123456789" name='uid' />
+                            <input type="text" placeholder="123456789" name='uid' onChange={(e) =>{this.setState({uid:e.target.value})}} />
                         </div>
                         <div className="name">
                             <p className="nameTitle">কত ডাইমন্ড নিতে চান?</p>
@@ -125,7 +154,7 @@ export default class Topup extends Component {
                                 </div>
                         </div>
 
-                        <did className="paymentMethod">
+                        <div className="paymentMethod">
                             <div className="paymentImg">
                                 <img src={bkash} value="bkash" alt="bkash" onClick={ () => this.setState({paymentMethod:"bkash"}) } />
                             </div>
@@ -135,11 +164,11 @@ export default class Topup extends Component {
                             <div className="paymentImg">
                                 <img src={rocket} value="rocket" alt="rocket" onClick={ () => this.setState({paymentMethod:"rocket"}) } />
                             </div>
-                        </did>
+                        </div>
                         <PaymentDiv method={this.state.paymentMethod} />
                         <div className="name">
                             <p className="nameTitle">যে নাম্বার থেকে টাকা পাঠাবেনঃ</p>
-                            <input type="text" placeholder="123xx-xxxxxx" name='number' />
+                            <input type="text" placeholder="123xx-xxxxxx" name='number' onChange={(e) =>{this.setState({number:e.target.value})}} />
                         </div>
                         <button className="topupFormSubmitBtn" type="submit">কিনুন</button>
                     </form>
