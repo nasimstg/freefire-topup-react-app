@@ -12,6 +12,8 @@ import Monthly from './pages/monthly/Monthly';
 import Admin from './components/Admin'
 import Promo from './pages/promo/Promo';
 import Airdrop from './pages/airdrop/Airdrop';
+import OrderPage from './pages/OrderPage/OrderPage';
+
 function App() {
   return (
       <BrowserRouter>
@@ -20,7 +22,10 @@ function App() {
           <Admin />
           </React.StrictMode>,
           <Switch>
-          <Route path="/topup" component={Topup} />
+            <Route path="/topup/newOrderId=:id" component={OrderPage} />
+          </Switch>
+          <Switch>
+          <Route exact path="/topup" component={Topup} />
           </Switch>
           <Switch>
           <Route path="/about" component={About} />
