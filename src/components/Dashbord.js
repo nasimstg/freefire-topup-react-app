@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { useAuth } from "./contexts/AuthContext"
-import { Link, Switch, useHistory } from "react-router-dom"
-import Regular from "../pages/admin/Regular"
+import { Link, Switch, useHistory, Route } from "react-router-dom"
+
 
 export default function Dashboard() {
   const [error, setError] = useState("")
@@ -21,15 +21,15 @@ export default function Dashboard() {
 
   return (
     <>
-        <Switch>
-        <div className="section">
-            <button className="btn"><Link to="/admin/uid">UID</Link></button>
-            <button className="btn"><Link to="/admin/idpass">ID Pass</Link></button>
+        <div className="section" >
+            <button className="btn" style={{margin:"5px"}}><Link to="/admin/topup">UID</Link></button>
+            <button className="btn" style={{margin:"5px"}}><Link to="/admin/idpass">ID Pass</Link></button>
+            <button className="btn" style={{margin:"5px"}}><Link to="/admin/update">Update</Link></button>
+            <button className="btn" style={{margin:"5px"}}><Link to="/admin/promo">Promo</Link></button>
+            <button className="btn" style={{margin:"5px"}}><Link to="/admin/weekly">Weekly</Link></button>
+            <button className="btn" style={{margin:"5px"}}><Link to="/admin/monthly">Monthly</Link></button>
+            <button className="btn" style={{margin:"5px"}}><Link to="/admin/airdrop">Airdrop</Link></button>
         </div>
-        <Switch>
-            <Regular />
-        </Switch>
-        </Switch>
         <div>
             <h2>Porfile</h2>
             {error && <p>{error}</p>}

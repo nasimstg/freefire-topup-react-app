@@ -13,6 +13,7 @@ import Admin from './components/Admin'
 import Promo from './pages/promo/Promo';
 import Airdrop from './pages/airdrop/Airdrop';
 import OrderPage from './pages/OrderPage/OrderPage';
+import Check from './pages/checkeStatus/Check';
 
 function App() {
   return (
@@ -20,11 +21,14 @@ function App() {
           <Nav />
           <React.StrictMode>
           <Admin />
-          </React.StrictMode>,
+          </React.StrictMode>
           <Switch>
             <Route path="/topup/newOrderId=:id" component={OrderPage} />
-          </Switch>
-          <Switch>
+            </Switch>
+            <Switch>
+            <Route path="/check" component={Check} />
+            </Switch>
+            <Switch>
           <Route exact path="/topup" component={Topup} />
           </Switch>
           <Switch>

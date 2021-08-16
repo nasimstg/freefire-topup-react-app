@@ -21,7 +21,7 @@ export default function Nav(){
         return (
             <section className="navBar">
                 <div className="navContainer">
-                    <div className="navLogo"><p className='navLogoText'><Link className="navLinkA" exact="true" to="/">ffabc.xyz</Link></p></div>
+                    <div className="navLogo"><p className='navLogoText'><Link className="navLinkA" exact="true" to="/">ffBd</Link></p></div>
                     <div id="hidden" className="navLinks">
                         <ul className="navLinkList">
                                 <li className="navLinkListIteam">
@@ -35,7 +35,7 @@ export default function Nav(){
                                 </li>
                         </ul>
                     </div>
-                    <div className="navBtn"> <button className='btn'> Check </button>
+                    <div className="navBtn"> <button className='btn'> <Link to="/check">Check</Link></button>
                     <button id="notHidden" className="hamburger" 
                     onClick={()=> setShowMenu(!showMenu)}><img src={Hamburgr} alt="" /></button></div>
                 </div>

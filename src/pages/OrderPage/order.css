@@ -1,0 +1,55 @@
+.orderPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ padding: 25px;
+}
+
+.title_title{
+    font-size: 28px;
+}
+
+.titleStatus{
+    color: rgb(51, 255, 0);
+    background-color: rgb(48, 48, 48);
+    margin: 5px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+.orderContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.orderLebel{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.orderHelp{
+    margin-top: 25px;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+.orderHelp h1{
+margin-top: 10px;
+}
+.orderHelp p{
+    margin-bottom: 10px;
+}
+.orderHelpDanger{
+    color: red;
+}

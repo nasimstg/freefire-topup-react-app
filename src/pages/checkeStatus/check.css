@@ -1,0 +1,21 @@
+.checkForm{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.checkInput{
+ margin-top: 25px;
+}
+.checkInput input{
+    padding: 8px 15px;
+    outline: none;
+    font-size: 18px;
+}
+
+.checkBtn{
+    margin-top: 15px;
+}

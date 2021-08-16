@@ -33,7 +33,10 @@ export default function Topup() {
         })
         history.push(`/topup/newOrderId=${newOrder.id}`)    
     }
-    
+    const formatDate = (dateString) => {
+        const options = { year: "numeric", month: "long", day: "numeric" }
+        return new Date(dateString).toLocaleDateString(undefined, options)
+      }
     function getPrice(){
         priceRef.get().then((item)=>{
             const items = item.docs.map((doc) => doc.data());
@@ -99,7 +102,7 @@ export default function Topup() {
                             <p className="nameTitle">যে নাম্বার থেকে টাকা পাঠাবেনঃ</p>
                             <input type="text" placeholder="123xx-xxxxxx" name='number' onChange={(e) =>setNumber(e.target.value)} />
                         </div>
-                        <button className="topupFormSubmitBtn" onClick={()=> pushOrder({name,value, qnt, address, number, uid, id:uuidv4()})}>কিনুন</button>
+                        <button className="topupFormSubmitBtn" onClick={()=> pushOrder({timestamp: formatDate(Date.now()),name,value,pending:true, canceled:false, qnt, address, number, uid, id:uuidv4()})}>কিনুন</button>
                 </div>
             </section>
         )
